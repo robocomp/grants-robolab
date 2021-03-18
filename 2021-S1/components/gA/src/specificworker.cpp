@@ -61,6 +61,7 @@ void SpecificWorker::initialize(int period)
         target_buffer.put(std::move(e->scenePos()), [/*r = robot_polygon->pos()*/](auto &&t, auto &out)
         {
             out.pos = t;
+            out.pos.setX(-out.pos.x());
             //out.ang = -atan2(t.x() - r.x(), t.y() - r.y()); //target ang in the direction or line joining robot-target
         });
     };
@@ -73,19 +74,68 @@ void SpecificWorker::initialize(int period)
 		timer.start(Period);
 
 }
+static float sigmoid(float x, float param){
+    return 2 / (exp(-x * param) + 1) - 1;
+}
 
-void SpecificWorker::compute()
-{
+Eigen::Vector2f SpecificWorker::transform_world_to_robot(
+        Eigen::Vector2f target_in_world,
+        float robot_angle,
+        Eigen::Vector2f robot_in_world) {
+    Eigen::Matrix2f rot;
+    rot << cos(robot_angle), -sin(robot_angle),
+            sin(robot_angle),  cos(robot_angle);
+    auto target_in_robot = rot * (target_in_world - robot_in_world);
+    return target_in_robot;
+}
+
+void SpecificWorker::compute() {
+    static Target target;
+    static bool active    = false;
     RoboCompFullPoseEstimation::FullPoseEuler pose;
-    try
-    {
-        pose = fullposeestimation_proxy->getFullPoseEuler();
+
+    const float threshold = 1000;
+    const float sigma     = -0.5 * 0.5 / log(0.3);
+
+    try {
+        Eigen::Vector2f target_in_world, robot_in_world, v_dist;
+        float alpha, dist;
+
+        if(auto t = target_buffer.try_get(); t.has_value()) {
+            target = t.value();
+            active = true;
+        }
+
+        pose            = fullposeestimation_proxy->getFullPoseEuler();
+        alpha           = pose.rz;
+        target_in_world = Eigen::Vector2f(target.pos.x(), target.pos.y());
+        robot_in_world  = Eigen::Vector2f(pose.x, pose.y);
+        v_dist          = transform_world_to_robot(target_in_world, alpha, robot_in_world);
+        dist            = v_dist.norm();
+
+        if (dist < threshold) {
+            active = false;
+            omnirobot_proxy->setSpeedBase(0, 0, 0);
+            return;
+        }
+        if (active) {
+            float beta = atan2(v_dist.x(), v_dist.y());
+            float angular_speed_reduction = beta / M_PI;
+            float wSpeed = sigmoid(beta, 2) * angular_speed_reduction;
+
+            cout << "Distance " << dist << endl;
+
+            float angular_reduction = exp( -(wSpeed * wSpeed) / sigma);
+            float distance_reduction = sigmoid(dist, 1/800.);
+            float vSpeed = 1000 * angular_reduction * distance_reduction;
+            omnirobot_proxy->setSpeedBase(0, 1*vSpeed, 10 * wSpeed);
+        }
+    } catch (const Ice::Exception &ex) {
+        std::cout << ex << std::endl;
     }
-    catch(const Ice::Exception &e) { std::cout << e.what() << std::endl;}
 
     scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz-M_PI));
     scene.robot_polygon->setPos(pose.x, pose.y);
-
 }
 
 /////////////////////////////////////////////////////////////////////////////////
