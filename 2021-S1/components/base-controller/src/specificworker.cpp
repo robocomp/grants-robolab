@@ -36,17 +36,6 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-//	THE FOLLOWING IS JUST AN EXAMPLE
-//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-//	try
-//	{
-//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-//		std::string innermodel_path = par.value;
-//		innerModel = std::make_shared(innermodel_path);
-//	}
-//	catch(const std::exception &e) { qFatal("Error reading config params"); }
-
-
 	return true;
 }
 
@@ -60,7 +49,9 @@ void SpecificWorker::initialize(int period)
         qDebug() << "Lambda SLOT: " << e->scenePos();
         target_buffer.put(std::move(e->scenePos()), [/*r = robot_polygon->pos()*/](auto &&t, auto &out)
         {
-            out.pos = t;
+            out.pos.x() = t.x();
+            out.pos.y() = t.y();
+            qInfo() << "New target " << t;
             //out.ang = -atan2(t.x() - r.x(), t.y() - r.y()); //target ang in the direction or line joining robot-target
         });
     };
@@ -76,18 +67,100 @@ void SpecificWorker::initialize(int period)
 
 void SpecificWorker::compute()
 {
+    static Target target;
+
+    auto robot_pose = read_base_state();
+    // check buffer
+    if(auto t = target_buffer.try_get(); t.has_value())
+    {
+        target.set_new_value(t.value());
+        draw_target(&scene, robot_pose, target);
+    }
+    // check target
+    if(not target.is_active()) return;
+    float dist_to_target = (target.pos - Eigen::Vector2f(robot_pose.x, robot_pose.y)).norm();
+    // check distance to target
+    if( dist_to_target < 100) // arrived
+    {
+        target.set_active(false);
+        qInfo() << "Arrived to target!";
+        try { omnirobot_proxy->setSpeedBase(0.f, 0.f, 0.f);}
+        catch(const Ice::Exception &e){ std::cout << e.what() << std::endl;}
+    }
+    else    // go for it
+    {
+        // transform target to robot coordinates
+        auto target_in_robot = transform_from_world_to_robot(robot_pose, target);
+        float ang_to_target_from_robot = atan2(target_in_robot.x(), target_in_robot.y());
+        float vadv = 0.f; float vrot = 0.f;
+        if (fabs(ang_to_target_from_robot) < 0.05)
+            ang_to_target_from_robot = 0.0;  // to avoid oscillations
+        // control equations
+        vrot = 10 * ang_to_target_from_robot;
+        vrot = std::clamp(vrot, -15.f, 15.f);
+        qInfo() << "error ang " << ang_to_target_from_robot  << "vrot " << vrot << "dist " << dist_to_target;
+        vadv = MAX_ADVANCE_SPEED * gaussian(vrot, 0.4, 0.2, 0.0);
+
+        try { omnirobot_proxy->setSpeedBase(0, vadv, vrot);}
+        catch(const Ice::Exception &e){ std::cout << e.what() << std::endl;}
+    }
+}
+
+Eigen::Vector2f SpecificWorker::transform_from_world_to_robot(const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target)
+{
+    Eigen::Matrix2f rot;
+    rot << cos(robot_pose.rz), -sin(robot_pose.rz),
+            sin(robot_pose.rz), cos(robot_pose.rz);
+    auto target_in_robot = rot.transpose() * (target.pos - Eigen::Vector2f(robot_pose.x, robot_pose.y));
+    return target_in_robot;
+}
+
+float SpecificWorker::sigmoid(float t)
+{
+    return 2.f / (1.f + exp(-t * 1.4)) - 1.f;
+}
+
+float SpecificWorker::gaussian(float value, float xValue, float yValue, float min)
+{
+    if (yValue <= 0)
+        return 1.f;
+    float landa = -fabs(xValue) / log(yValue);
+    float res = exp(-fabs(value) / landa);
+    return std::max(res, min);
+}
+
+RoboCompFullPoseEstimation::FullPoseEuler SpecificWorker::read_base_state()
+{
     RoboCompFullPoseEstimation::FullPoseEuler pose;
     try
     {
         pose = fullposeestimation_proxy->getFullPoseEuler();
     }
     catch(const Ice::Exception &e) { std::cout << e.what() << std::endl;}
-
-    scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz-M_PI));
+    pose.rz -= M_PI;
+    //qInfo() << pose.x << pose.y << pose.rz;
+    scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz));
     scene.robot_polygon->setPos(pose.x, pose.y);
-
+    return pose;
 }
 
+void SpecificWorker::draw_target(Robot2DScene *scene, const RoboCompFullPoseEstimation::FullPoseEuler &robot, const Target &target)
+{
+    static QGraphicsEllipseItem *target_draw = nullptr;
+
+    if (target_draw) scene->removeItem(target_draw);
+    target_draw = scene->addEllipse(target.pos.x() - 50, target.pos.y() - 50, 100, 100, QPen(QColor("green")), QBrush(QColor("green")));
+    // angular reference obtained from line joinning robot an target when  clicking
+    float tr_x = target.pos.x() - robot.x;
+    float tr_y = target.pos.y() - robot.y;
+    float ref_ang = -atan2(tr_x, tr_y);   // signo menos para tener ángulos respecto a Y CCW
+    auto ex = target.pos.x() + 350 * sin(-ref_ang);
+    auto ey = target.pos.y() + 350 * cos(-ref_ang);  //OJO signos porque el ang está respecto a Y CCW
+    auto line = scene->addLine(target.pos.x(), target.pos.y(), ex, ey, QPen(QBrush(QColor("green")), 20));
+    line->setParentItem(target_draw);
+    auto ball = scene->addEllipse(ex - 25, ey - 25, 50, 50, QPen(QColor("green")), QBrush(QColor("green")));
+    ball->setParentItem(target_draw);
+}
 /////////////////////////////////////////////////////////////////////////////////
 int SpecificWorker::startup_check()
 {
@@ -95,41 +168,3 @@ int SpecificWorker::startup_check()
 	QTimer::singleShot(200, qApp, SLOT(quit()));
 	return 0;
 }
-
-/**************************************/
-// From the RoboCompFullPoseEstimation you can call this methods:
-// this->fullposeestimation_proxy->getFullPoseEuler(...)
-// this->fullposeestimation_proxy->getFullPoseMatrix(...)
-// this->fullposeestimation_proxy->setInitialPose(...)
-
-/**************************************/
-// From the RoboCompFullPoseEstimation you can use this types:
-// RoboCompFullPoseEstimation::FullPoseMatrix
-// RoboCompFullPoseEstimation::FullPoseEuler
-
-/**************************************/
-// From the RoboCompLaser you can call this methods:
-// this->laser_proxy->getLaserAndBStateData(...)
-// this->laser_proxy->getLaserConfData(...)
-// this->laser_proxy->getLaserData(...)
-
-/**************************************/
-// From the RoboCompLaser you can use this types:
-// RoboCompLaser::LaserConfData
-// RoboCompLaser::TData
-
-/**************************************/
-// From the RoboCompOmniRobot you can call this methods:
-// this->omnirobot_proxy->correctOdometer(...)
-// this->omnirobot_proxy->getBasePose(...)
-// this->omnirobot_proxy->getBaseState(...)
-// this->omnirobot_proxy->resetOdometer(...)
-// this->omnirobot_proxy->setOdometer(...)
-// this->omnirobot_proxy->setOdometerPose(...)
-// this->omnirobot_proxy->setSpeedBase(...)
-// this->omnirobot_proxy->stopBase(...)
-
-/**************************************/
-// From the RoboCompOmniRobot you can use this types:
-// RoboCompOmniRobot::TMechParams
-
