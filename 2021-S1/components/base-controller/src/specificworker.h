@@ -32,6 +32,7 @@
 #include <doublebuffer/DoubleBuffer.h>
 #include <Eigen/Dense>
 
+
 class SpecificWorker : public GenericWorker
 {
 Q_OBJECT

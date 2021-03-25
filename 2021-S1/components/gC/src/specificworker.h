@@ -33,7 +33,8 @@
 #include <doublebuffer/DoubleBuffer.h>
 #include <Eigen/Dense>
 #include <math.h>
-
+#include <grid2d/grid2d.h>
+#include <grid2d/grid2d.cpp>
 
 
 class SpecificWorker : public GenericWorker
@@ -77,8 +78,11 @@ private:
     void draw_target(Robot2DScene *scene, const RoboCompFullPoseEstimation::FullPoseEuler &robot, const Target &target);
     //void draw_laser(Robot2DScene *scene, QPolygonF &laser_poly); // robot coordinates
 
-    Eigen::Vector2f transform_world_to_robot(Eigen::Vector2f target_in_world, float robot_angle, Eigen::Vector2f robot_in_world);
+    Eigen::Vector2f transform_world_to_robot(const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target);
     float aprox(float y);
+
+    //grid
+    Grid<> grid;
 };
 
 #endif

@@ -66,6 +66,9 @@ void SpecificWorker::initialize(int period)
         });
     };
     scene.initialize(graphicsView, target_slot, ROBOT_WIDTH, ROBOT_LONG, FILE_NAME);
+    auto d=scene.get_dimensions();
+    grid.initialize(&scene, Grid<>::Dimensions{.TILE_SIZE=d.TILE_SIZE,.HMIN=d.HMIN,.VMIN=d.VMIN,.WIDTH=d.WIDTH,.HEIGHT=d.HEIGHT});
+    grid.fill_with_obstacles(scene.get_obstacles());
 
     this->Period = period;
 	if(this->startup_check_flag)
@@ -88,41 +91,45 @@ void SpecificWorker::compute() {
     scene.robot_polygon->setPos(pose.x, pose.y);
     //check buffer
     if (auto t = target_buffer.try_get(); t.has_value()) {
+        auto path=grid.computePath(QPointF(pose.x,pose.y),QPointF(target.pos.x(),target.pos.y()));
         target.set_new_value(t.value()) ;
         draw_target(&scene, pose, target);
     }
     //check target
     if(not target.is_active()) return;
-    auto robot_in_world = Eigen::Vector2f{pose.x, pose.y};
-    auto dist = (target.pos-robot_in_world).norm();
-    if (dist > 100) {
-        auto vector = transform_world_to_robot(target.pos, pose.rz, robot_in_world);
-        float ang = atan2(vector[0], vector[1]);
-        float vang;
-        if (fabs(ang) < 0.05)
-            ang = 0;
-
-        vang = 3.f * (2.f / (1.f + exp(-ang)) - 1.f);
-        auto adv = MAX_ADV * exp(-(pow(vang, 2) / s)) * aprox(dist);
-        try { omnirobot_proxy->setSpeedBase(0, 0, vang); }
-        catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; }
-        qInfo() << "error ang " << ang  << "vrot " << vang << "dist " << dist;
-    }
-    else {
+    auto dist = (target.pos- Eigen::Vector2f{pose.x, pose.y}).norm();
+    if (dist < 100) {
         target.set_active(false);
         try { omnirobot_proxy->setSpeedBase(0.f, 0.f, 0.f); }
         catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; }
+
+    }
+    else {
+        auto vector = transform_world_to_robot(pose, target);
+        float ang = atan2(vector.x(), vector.y());
+        float vang=0.f;
+        float vadv=0.f;
+        if (fabs(ang) < 0.05) {
+            ang = 0.0;
+        }
+        vang = 10 * ang;
+        vang = std::clamp(vang, -15.f, 15.f);
+        //vang = 3.f * (2.f / (1.f + exp(-ang)) - 1.f);
+        vadv = MAX_ADV * exp(-(pow(vang, 2) / s)) * aprox(dist);
+        try { omnirobot_proxy->setSpeedBase(0, 0, vang); }
+        catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; }
+        qInfo() << "error ang " << ang  << "vrot " << vang << "dist " << dist;
     }
 
 
 
 }
-Eigen::Vector2f SpecificWorker::transform_world_to_robot(Eigen::Vector2f target_in_world, float robot_angle, Eigen::Vector2f robot_in_world)
+Eigen::Vector2f SpecificWorker::transform_world_to_robot(const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target)
 {
     Eigen::Matrix2f rot;
-    rot << cos(robot_angle), sin(robot_angle),
-            -sin(robot_angle), cos(robot_angle);
-    auto target_in_robot = rot.transpose()* (target_in_world - robot_in_world);
+    rot << cos(robot_pose.rz), sin(robot_pose.rz),
+            -sin(robot_pose.rz), cos(robot_pose.rz);
+    auto target_in_robot = rot.transpose()* (target.pos- Eigen::Vector2f(robot_pose.x, robot_pose.y));
     return target_in_robot;
 }
 float SpecificWorker::aprox(float x)
