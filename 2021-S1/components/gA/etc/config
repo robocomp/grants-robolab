@@ -1,9 +1,9 @@
 CommonBehavior.Endpoints=tcp -p 10221
 
 # Proxies for required interfaces
-FullPoseEstimationProxy = fullposeestimation:tcp  -p 10016 -h alab-01.local
-LaserProxy = laser:tcp -h localhost -p 10003 -h alab-01.local
-OmniRobotProxy = omnirobot:tcp -h localhost -p 10004 -h alab-01.local
+FullPoseEstimationProxy = fullposeestimation:tcp  -p 10016 -h salabeta7.local
+LaserProxy = laser:tcp -h localhost -p 10003 -h salabeta7.local
+OmniRobotProxy = omnirobot:tcp -h localhost -p 10004 -h salabeta7.local
 
 
 InnerModelPath = innermodel.xml
