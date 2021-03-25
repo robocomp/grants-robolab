@@ -60,32 +60,134 @@ void SpecificWorker::initialize(int period)
         qDebug() << "Lambda SLOT: " << e->scenePos();
         target_buffer.put(std::move(e->scenePos()), [/*r = robot_polygon->pos()*/](auto &&t, auto &out)
         {
-            out.pos = t;
+            out.pos.x() = t.x();
+            out.pos.y() = t.y();
             //out.ang = -atan2(t.x() - r.x(), t.y() - r.y()); //target ang in the direction or line joining robot-target
         });
     };
     scene.initialize(graphicsView, target_slot, ROBOT_WIDTH, ROBOT_LONG, FILE_NAME);
+
+    auto d = scene.get_dimensions();
+    grid.initialize(&scene, Grid<>::Dimensions{ .TILE_SIZE=d.TILE_SIZE, .HMIN=d.HMIN, .VMIN=d.VMIN, .WIDTH=d.WIDTH, .HEIGHT=d.HEIGHT });
+    grid.fill_with_obstacles(scene.get_obstacles());
 
     this->Period = period;
 	if(this->startup_check_flag)
 		this->startup_check();
 	else
 		timer.start(Period);
-
 }
 
 void SpecificWorker::compute()
 {
     RoboCompFullPoseEstimation::FullPoseEuler pose;
+    //static bool activo;
+    static Target target;
+
     try
     {
         pose = fullposeestimation_proxy->getFullPoseEuler();
     }
     catch(const Ice::Exception &e) { std::cout << e.what() << std::endl;}
 
-    scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz-M_PI));
+    pose.rz -= M_PI;
+    scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz));
     scene.robot_polygon->setPos(pose.x, pose.y);
 
+    // check buffer
+    if(auto t = target_buffer.try_get(); t.has_value())
+    {
+        target.set_new_value(t.value());
+        draw_target(&scene, pose, target);
+        auto path=grid.computePath(QPointF(pose.x, pose.y), QPointF(target.pos.x(), target.pos.y()));
+        grid.draw_path(&scene, path);
+    }
+
+    // check target
+    if(not target.is_active()) return;
+    float dist = (target.pos - Eigen::Vector2f(pose.x, pose.y)).norm();
+    // check distance to target
+    if(dist < 100){
+        target.set_active(false);
+        qInfo() << "Arrived to target!";
+        try { omnirobot_proxy->setSpeedBase(0.f, 0.f, 0.f);}
+        catch(const Ice::Exception &e){ std::cout << e.what() << std::endl;}
+    }
+
+    else{
+
+        auto tr = transform_world_to_robot(pose, target);
+        //qInfo() << tr.x() << tr.y();
+        float ang= atan2(tr.x(),tr.y());
+
+        float adv_speed = 0.f; float rot_speed = 0.f;
+
+        if (fabs(ang)<0.05) ang = 0.0;
+
+        rot_speed = 10*ang;
+        rot_speed = std::clamp(rot_speed, -15.f, 15.f);
+        qInfo() << "error ang " << ang  << "vrot " << rot_speed << "dist " << dist;
+        adv_speed=MAX_ADVANCE_SPEED*gauss(rot_speed, 0.4, 0.2, 0.0);
+
+        try
+        {
+            omnirobot_proxy->setSpeedBase(0, adv_speed, rot_speed);
+        }
+        catch(const Ice::Exception &e) { std::cout << e.what() << std::endl;}
+    }
+
+    //scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz-M_PI));
+    //scene.robot_polygon->setPos(pose.x, pose.y);
+}
+
+
+Eigen::Vector2f SpecificWorker::transform_world_to_robot(const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target)
+{
+    Eigen::Matrix2f rot;
+    rot << cos(robot_pose.rz), -sin(robot_pose.rz),
+            sin(robot_pose.rz), cos(robot_pose.rz);
+    auto target_in_robot = rot.transpose() * (target.pos - Eigen::Vector2f(robot_pose.x, robot_pose.y));
+    return target_in_robot;
+}
+
+float SpecificWorker::sigmoide(float x)
+{
+    return (2/(1+pow(M_E,-x))-1);
+}
+
+float SpecificWorker::gauss(float value, float xValue, float yValue, float min)
+{
+    if (yValue <= 0)
+        return 1.f;
+    float landa = -fabs(xValue) / log(yValue);
+    float res = exp(-fabs(value) / landa);
+    return std::max(res, min);
+}
+
+float SpecificWorker::fdist(float x)
+{
+    float res;
+    if (x>100) res=1;
+    else res=x/1000;
+    return res;
+}
+
+void SpecificWorker::draw_target(Robot2DScene *scene, const RoboCompFullPoseEstimation::FullPoseEuler &robot, const Target &target)
+{
+    static QGraphicsEllipseItem *target_draw = nullptr;
+
+    if (target_draw) scene->removeItem(target_draw);
+    target_draw = scene->addEllipse(target.pos.x() - 50, target.pos.y() - 50, 100, 100, QPen(QColor("green")), QBrush(QColor("green")));
+    // angular reference obtained from line joinning robot an target when  clicking
+    float tr_x = target.pos.x() - robot.x;
+    float tr_y = target.pos.y() - robot.y;
+    float ref_ang = -atan2(tr_x, tr_y);   // signo menos para tener ángulos respecto a Y CCW
+    auto ex = target.pos.x() + 350 * sin(-ref_ang);
+    auto ey = target.pos.y() + 350 * cos(-ref_ang);  //OJO signos porque el ang está respecto a Y CCW
+    auto line = scene->addLine(target.pos.x(), target.pos.y(), ex, ey, QPen(QBrush(QColor("green")), 20));
+    line->setParentItem(target_draw);
+    auto ball = scene->addEllipse(ex - 25, ey - 25, 50, 50, QPen(QColor("green")), QBrush(QColor("green")));
+    ball->setParentItem(target_draw);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
