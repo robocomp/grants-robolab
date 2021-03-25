@@ -32,7 +32,8 @@
 #include "myscene.h"
 #include <doublebuffer/DoubleBuffer.h>
 #include <Eigen/Dense>
-
+#include <grid2d/grid2d.h>
+#include <grid2d/grid2d.cpp>
 
 class SpecificWorker : public GenericWorker
 {
@@ -41,8 +42,8 @@ public:
 	SpecificWorker(TuplePrx tprx, bool startup_check);
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
-    float sigmoide(float x);
-    float gauss(float x);
+
+
     float fdist(float x);
 
 
@@ -50,8 +51,6 @@ public slots:
 	void compute();
 	int startup_check();
 	void initialize(int period);
-    Eigen::Vector2f transform_world_to_robot(Eigen::Vector2f target_in_world, float robot_angle, Eigen::Vector2f robot_in_world);
-
 
 private:
 	bool startup_check_flag;
@@ -59,7 +58,7 @@ private:
     // Target
     struct Target
     {
-        QPointF pos;
+        Eigen::Vector2f pos;
         float ang;
         void set_new_value(const Target &t) { pos = t.pos; ang = t.ang; active = true; };
         bool active = false;
@@ -74,13 +73,21 @@ private:
     //robot
     const float ROBOT_WIDTH = 400;
     const float ROBOT_LONG = 450;
+    const float MAX_ADVANCE_SPEED = 800;
     const std::string FILE_NAME = "../../../etc/viriato.simscene.json";
 
     // 2d scene
+    // 2d scene
     Robot2DScene scene;
-    //void draw_target(Robot2DScene *scene, std::shared_ptr<Robot> robot, const Target &target);
+    void draw_target(Robot2DScene *scene, const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target);
     void draw_laser(Robot2DScene *scene, QPolygonF &laser_poly); // robot coordinates
 
+    Eigen::Vector2f transform_world_to_robot(const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target);
+    float gauss(float value, float xValue, float yValue, float min);
+    float sigmoide(float x);
+
+    //grid
+    Grid <> grid;
 };
 
 #endif
