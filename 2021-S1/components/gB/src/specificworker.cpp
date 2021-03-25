@@ -61,6 +61,7 @@ void SpecificWorker::initialize(int period)
         target_buffer.put(std::move(e->scenePos()), [/*r = robot_polygon->pos()*/](auto &&t, auto &out)
         {
             out.pos = t;
+            out.pos.setX(-t.x());
             //out.ang = -atan2(t.x() - r.x(), t.y() - r.y()); //target ang in the direction or line joining robot-target
         });
     };
@@ -71,21 +72,90 @@ void SpecificWorker::initialize(int period)
 		this->startup_check();
 	else
 		timer.start(Period);
-
 }
 
 void SpecificWorker::compute()
 {
     RoboCompFullPoseEstimation::FullPoseEuler pose;
+    static bool activo;
+    Target target;
+
     try
     {
         pose = fullposeestimation_proxy->getFullPoseEuler();
     }
     catch(const Ice::Exception &e) { std::cout << e.what() << std::endl;}
 
+        if(auto t = target_buffer.try_get(); t.has_value())
+        {
+            activo = true;
+            target = t.value();
+        }
+
+        float dist = sqrt(pow(pose.x - target.pos.x(), 2) + pow(pose.y - target.pos.y(), 2));
+
+        if(dist < 100){
+            activo=false;
+            omnirobot_proxy->stopBase();
+            return;
+        }
+
+        if(activo){
+
+            auto tr = transform_world_to_robot(Eigen::Vector2f{target.pos.x(), target.pos.y()}, pose.rz, Eigen::Vector2f{pose.x, pose.y});
+            //qInfo() << tr.x() << tr.y();
+            float rot_speed;
+            float ang= atan2(tr.x(),tr.y());
+            if (fabs(ang)<0.05) rot_speed=0;
+            else rot_speed=sigmoide(ang);
+            float adv_speed=1000*gauss(rot_speed)*fdist(dist);
+
+            try
+            {
+                omnirobot_proxy->setSpeedBase(0, 0, rot_speed);
+            }
+            catch(const Ice::Exception &e) { std::cout << e.what() << std::endl;}
+        }
+
+
+
     scene.robot_polygon->setRotation(qRadiansToDegrees(pose.rz-M_PI));
     scene.robot_polygon->setPos(pose.x, pose.y);
 
+}
+
+
+Eigen::Vector2f SpecificWorker::transform_world_to_robot(Eigen::Vector2f target_in_world, float robot_angle, Eigen::Vector2f robot_in_world)
+{
+    // Inicializamos una matriz de 2x2 en sentido horario.
+    Eigen::Matrix2f rot;
+
+
+    rot <<  cos(robot_angle), sin(robot_angle),
+            -sin(robot_angle), cos(robot_angle);
+
+    auto target_in_robot = rot.transpose()* (target_in_world - robot_in_world);
+    // calculation of angle of target_in_robot wrt robot’ coordinate system
+    float target_angle_in_robot = atan2(target_in_robot[0], target_in_robot[1]);
+    return target_in_robot;
+}
+
+float SpecificWorker::sigmoide(float x)
+{
+    return (2/(1+pow(M_E,-x))-1);
+}
+
+float SpecificWorker::gauss(float x)
+{
+    return pow(M_E,(-pow(x,2)/0.1085736205));
+}
+
+float SpecificWorker::fdist(float x)
+{
+    float res;
+    if (x>100) res=1;
+    else res=x/1000;
+    return res;
 }
 
 /////////////////////////////////////////////////////////////////////////////////

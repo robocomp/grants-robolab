@@ -31,6 +31,7 @@
 //#include <innermodel/innermodel.h>
 #include "myscene.h"
 #include <doublebuffer/DoubleBuffer.h>
+#include <Eigen3/Dense>
 
 
 class SpecificWorker : public GenericWorker
@@ -40,6 +41,7 @@ public:
 	SpecificWorker(TuplePrx tprx, bool startup_check);
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
+    Eigen::Vector2f transform_world_to_robot(Eigen::Vector2f target_in_world, float robot_angle, Eigen::Vector2f robot_in_world);
 
 
 
