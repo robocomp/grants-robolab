@@ -31,6 +31,9 @@
 //#include <innermodel/innermodel.h>
 #include "myscene.h"
 #include <doublebuffer/DoubleBuffer.h>
+#include <Eigen/Dense>
+#include <math.h>
+
 
 
 class SpecificWorker : public GenericWorker
@@ -42,7 +45,6 @@ public:
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
 
 
-
 public slots:
 	void compute();
 	int startup_check();
@@ -50,11 +52,10 @@ public slots:
 
 private:
 	bool startup_check_flag;
-
     // Target
     struct Target
     {
-        QPointF pos;
+        Eigen::Vector2f pos;
         float ang;
         void set_new_value(const Target &t) { pos = t.pos; ang = t.ang; active = true; };
         bool active = false;
@@ -73,9 +74,11 @@ private:
 
     // 2d scene
     Robot2DScene scene;
-    //void draw_target(Robot2DScene *scene, std::shared_ptr<Robot> robot, const Target &target);
-    void draw_laser(Robot2DScene *scene, QPolygonF &laser_poly); // robot coordinates
+    void draw_target(Robot2DScene *scene, const RoboCompFullPoseEstimation::FullPoseEuler &robot, const Target &target);
+    //void draw_laser(Robot2DScene *scene, QPolygonF &laser_poly); // robot coordinates
 
+    Eigen::Vector2f transform_world_to_robot(Eigen::Vector2f target_in_world, float robot_angle, Eigen::Vector2f robot_in_world);
+    float aprox(float y);
 };
 
 #endif
