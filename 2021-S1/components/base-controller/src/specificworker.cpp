@@ -101,7 +101,7 @@ void SpecificWorker::compute()
         qInfo() << "error ang " << ang_to_target_from_robot  << "vrot " << vrot << "dist " << dist_to_target;
         vadv = MAX_ADVANCE_SPEED * gaussian(vrot, 0.4, 0.2, 0.0);
 
-        try { omnirobot_proxy->setSpeedBase(0, vadv, vrot);}
+        try { omnirobot_proxy->setSpeedBase(0, 0, vrot);}
         catch(const Ice::Exception &e){ std::cout << e.what() << std::endl;}
     }
 }
