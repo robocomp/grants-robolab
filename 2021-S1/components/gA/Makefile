@@ -68,10 +68,10 @@ RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+CMAKE_SOURCE_DIR = /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+CMAKE_BINARY_DIR = /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,9 +146,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,17 +177,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src
+# Target rules for targets named ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src
 
 # Build rule for target.
-ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src
-.PHONY : ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src
+ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src
+.PHONY : ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src
 
 # fast build rule for target.
-ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src.dir/build.make src/CMakeFiles/ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src.dir/build
-.PHONY : ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src/fast
+ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src.dir/build.make src/CMakeFiles/ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src.dir/build
+.PHONY : ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src/fast
 
 #=============================================================================
 # Target rules for targets named basecontroller
@@ -227,7 +227,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ICES__home_robo02_robocomp_components_grants-robolab_2021-S1_components_gA_src"
+	@echo "... ICES__home_robocomp_robocomp_components_grants-robolab_2021-S1_components_gA_src"
 	@echo "... basecontroller_autogen"
 	@echo "... basecontroller"
 .PHONY : help

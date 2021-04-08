@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen",
-	"CMAKE_BINARY_DIR" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src",
+	"BUILD_DIR" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen",
+	"CMAKE_BINARY_DIR" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src",
 	"CMAKE_EXECUTABLE" : "/snap/clion/145/bin/cmake/linux/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeLists.txt",
+		"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeLists.txt",
 		"/opt/robocomp/cmake/robocomp.cmake",
 		"/opt/robocomp/cmake/modules/qt.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
@@ -68,7 +68,7 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake",
-		"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeListsSpecific.txt",
+		"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeListsSpecific.txt",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/FindIce.cmake",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/SelectLibraryConfigurations.cmake",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/SelectLibraryConfigurations.cmake",
@@ -84,41 +84,44 @@
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake",
+		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.c.in",
+		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c",
+		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA",
+	"CMAKE_SOURCE_DIR" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.h",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.h",
 			"MU",
 			"EWIEGA46WW/moc_commonbehaviorI.cpp"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.h",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_genericmonitor.cpp"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.h",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.h",
 			"MU",
 			"EWIEGA46WW/moc_genericworker.cpp"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/myscene.h",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/myscene.h",
 			"MU",
 			"EWIEGA46WW/moc_myscene.cpp"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.h",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.h",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.h",
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp"
 		],
@@ -140,8 +143,8 @@
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"ICE_CPP11_MAPPING",
@@ -163,11 +166,11 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src",
-		"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src",
+		"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src",
+		"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src",
 		"/opt/robocomp/include",
 		"/classes",
-		"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA",
+		"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA",
 		"/opt/robocomp/classes",
 		"/opt/robocomp/libs",
 		"/opt/robocomp/interfaces",
@@ -201,41 +204,41 @@
 		"-c",
 		"/snap/clion/145/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 12,
-	"SETTINGS_FILE" : "/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp",
 			"MU"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp",
 			"MU"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp",
 			"MU"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp",
 			"MU"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp",
 			"MU"
 		],
 		[
-			"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp",
+			"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp",
 			"MU"
 		],
 		[ "/opt/robocomp/classes/grid2d/grid2d.cpp", "MU" ],
@@ -247,7 +250,7 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/mainUI.ui"
+		"/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/mainUI.ui"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

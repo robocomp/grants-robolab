@@ -63,10 +63,10 @@ RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+CMAKE_SOURCE_DIR = /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+CMAKE_BINARY_DIR = /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
 
 # Utility rule file for basecontroller_autogen.
 
@@ -74,8 +74,8 @@ CMAKE_BINARY_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/compo
 include src/CMakeFiles/basecontroller_autogen.dir/progress.make
 
 src/CMakeFiles/basecontroller_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target basecontroller"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /snap/clion/145/bin/cmake/linux/bin/cmake -E cmake_autogen /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target basecontroller"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /snap/clion/145/bin/cmake/linux/bin/cmake -E cmake_autogen /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/AutogenInfo.json Debug
 
 basecontroller_autogen: src/CMakeFiles/basecontroller_autogen
 basecontroller_autogen: src/CMakeFiles/basecontroller_autogen.dir/build.make
@@ -88,10 +88,10 @@ src/CMakeFiles/basecontroller_autogen.dir/build: basecontroller_autogen
 .PHONY : src/CMakeFiles/basecontroller_autogen.dir/build
 
 src/CMakeFiles/basecontroller_autogen.dir/clean:
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && $(CMAKE_COMMAND) -P CMakeFiles/basecontroller_autogen.dir/cmake_clean.cmake
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && $(CMAKE_COMMAND) -P CMakeFiles/basecontroller_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/basecontroller_autogen.dir/clean
 
 src/CMakeFiles/basecontroller_autogen.dir/depend:
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/basecontroller_autogen.dir/depend
 

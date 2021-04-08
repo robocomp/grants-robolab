@@ -63,10 +63,10 @@ RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+CMAKE_SOURCE_DIR = /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+CMAKE_BINARY_DIR = /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/basecontroller.dir/depend.make
@@ -78,251 +78,251 @@ include src/CMakeFiles/basecontroller.dir/progress.make
 include src/CMakeFiles/basecontroller.dir/flags.make
 
 src/CommonBehavior.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating CommonBehavior.h and CommonBehavior.cpp from CommonBehavior.ice"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp CommonBehavior.ice -I. --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating CommonBehavior.h and CommonBehavior.cpp from CommonBehavior.ice"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp CommonBehavior.ice -I. --output-dir .
 
 src/CommonBehavior.h: src/CommonBehavior.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/CommonBehavior.h
 
 src/FullPoseEstimation.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating FullPoseEstimation.h and FullPoseEstimation.cpp from FullPoseEstimation.ice"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp FullPoseEstimation.ice -I. --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating FullPoseEstimation.h and FullPoseEstimation.cpp from FullPoseEstimation.ice"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp FullPoseEstimation.ice -I. --output-dir .
 
 src/FullPoseEstimation.h: src/FullPoseEstimation.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/FullPoseEstimation.h
 
 src/GenericBase.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating GenericBase.h and GenericBase.cpp from GenericBase.ice"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp GenericBase.ice -I. --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating GenericBase.h and GenericBase.cpp from GenericBase.ice"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp GenericBase.ice -I. --output-dir .
 
 src/GenericBase.h: src/GenericBase.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/GenericBase.h
 
 src/Laser.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Laser.h and Laser.cpp from Laser.ice"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp Laser.ice -I. --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Laser.h and Laser.cpp from Laser.ice"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp Laser.ice -I. --output-dir .
 
 src/Laser.h: src/Laser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Laser.h
 
 src/OmniRobot.cpp:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating OmniRobot.h and OmniRobot.cpp from OmniRobot.ice"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp OmniRobot.ice -I. --output-dir .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating OmniRobot.h and OmniRobot.cpp from OmniRobot.ice"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && slice2cpp OmniRobot.ice -I. --output-dir .
 
 src/OmniRobot.h: src/OmniRobot.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate src/OmniRobot.h
 
 src/ui_mainUI.h: src/mainUI.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ui_mainUI.h"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/lib/qt5/bin/uic -o /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/ui_mainUI.h /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/mainUI.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ui_mainUI.h"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/lib/qt5/bin/uic -o /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/ui_mainUI.h /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/mainUI.ui
 
 src/CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.o: src/basecontroller_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp
 
 src/CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp > CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp > CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.i
 
 src/CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp -o CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/basecontroller_autogen/mocs_compilation.cpp -o CMakeFiles/basecontroller.dir/basecontroller_autogen/mocs_compilation.cpp.s
 
 src/CMakeFiles/basecontroller.dir/specificworker.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/specificworker.cpp.o: src/specificworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/basecontroller.dir/specificworker.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/specificworker.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/basecontroller.dir/specificworker.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/specificworker.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp
 
 src/CMakeFiles/basecontroller.dir/specificworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/specificworker.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp > CMakeFiles/basecontroller.dir/specificworker.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp > CMakeFiles/basecontroller.dir/specificworker.cpp.i
 
 src/CMakeFiles/basecontroller.dir/specificworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/specificworker.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp -o CMakeFiles/basecontroller.dir/specificworker.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificworker.cpp -o CMakeFiles/basecontroller.dir/specificworker.cpp.s
 
 src/CMakeFiles/basecontroller.dir/specificmonitor.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/specificmonitor.cpp.o: src/specificmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/basecontroller.dir/specificmonitor.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/specificmonitor.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/basecontroller.dir/specificmonitor.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/specificmonitor.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp
 
 src/CMakeFiles/basecontroller.dir/specificmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/specificmonitor.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp > CMakeFiles/basecontroller.dir/specificmonitor.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp > CMakeFiles/basecontroller.dir/specificmonitor.cpp.i
 
 src/CMakeFiles/basecontroller.dir/specificmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/specificmonitor.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp -o CMakeFiles/basecontroller.dir/specificmonitor.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/specificmonitor.cpp -o CMakeFiles/basecontroller.dir/specificmonitor.cpp.s
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.o: /opt/robocomp/classes/grid2d/grid2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.o -c /opt/robocomp/classes/grid2d/grid2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.o -c /opt/robocomp/classes/grid2d/grid2d.cpp
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/grid2d/grid2d.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/grid2d/grid2d.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.i
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/grid2d/grid2d.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/grid2d/grid2d.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/grid2d/grid2d.cpp.s
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o: /opt/robocomp/classes/rapplication/rapplication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o -c /opt/robocomp/classes/rapplication/rapplication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.o -c /opt/robocomp/classes/rapplication/rapplication.cpp
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.i
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/rapplication/rapplication.cpp.s
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.o: /opt/robocomp/classes/sigwatch/sigwatch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.o -c /opt/robocomp/classes/sigwatch/sigwatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.o -c /opt/robocomp/classes/sigwatch/sigwatch.cpp
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.i
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/sigwatch/sigwatch.cpp.s
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.o: /opt/robocomp/classes/qlog/qlog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.o -c /opt/robocomp/classes/qlog/qlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.o -c /opt/robocomp/classes/qlog/qlog.cpp
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/qlog/qlog.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/robocomp/classes/qlog/qlog.cpp > CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.i
 
 src/CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/basecontroller.dir/opt/robocomp/classes/qlog/qlog.cpp.s
 
 src/CMakeFiles/basecontroller.dir/main.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/basecontroller.dir/main.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/main.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/basecontroller.dir/main.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/main.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp
 
 src/CMakeFiles/basecontroller.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/main.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp > CMakeFiles/basecontroller.dir/main.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp > CMakeFiles/basecontroller.dir/main.cpp.i
 
 src/CMakeFiles/basecontroller.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/main.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp -o CMakeFiles/basecontroller.dir/main.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/main.cpp -o CMakeFiles/basecontroller.dir/main.cpp.s
 
 src/CMakeFiles/basecontroller.dir/genericmonitor.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/genericmonitor.cpp.o: src/genericmonitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/basecontroller.dir/genericmonitor.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/genericmonitor.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/basecontroller.dir/genericmonitor.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/genericmonitor.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp
 
 src/CMakeFiles/basecontroller.dir/genericmonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/genericmonitor.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp > CMakeFiles/basecontroller.dir/genericmonitor.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp > CMakeFiles/basecontroller.dir/genericmonitor.cpp.i
 
 src/CMakeFiles/basecontroller.dir/genericmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/genericmonitor.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp -o CMakeFiles/basecontroller.dir/genericmonitor.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericmonitor.cpp -o CMakeFiles/basecontroller.dir/genericmonitor.cpp.s
 
 src/CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.o: src/commonbehaviorI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp
 
 src/CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp > CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp > CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.i
 
 src/CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp -o CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/commonbehaviorI.cpp -o CMakeFiles/basecontroller.dir/commonbehaviorI.cpp.s
 
 src/CMakeFiles/basecontroller.dir/genericworker.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/genericworker.cpp.o: src/genericworker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/basecontroller.dir/genericworker.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/genericworker.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/basecontroller.dir/genericworker.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/genericworker.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp
 
 src/CMakeFiles/basecontroller.dir/genericworker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/genericworker.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp > CMakeFiles/basecontroller.dir/genericworker.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp > CMakeFiles/basecontroller.dir/genericworker.cpp.i
 
 src/CMakeFiles/basecontroller.dir/genericworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/genericworker.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp -o CMakeFiles/basecontroller.dir/genericworker.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/genericworker.cpp -o CMakeFiles/basecontroller.dir/genericworker.cpp.s
 
 src/CMakeFiles/basecontroller.dir/CommonBehavior.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/basecontroller.dir/CommonBehavior.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/CommonBehavior.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CommonBehavior.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/basecontroller.dir/CommonBehavior.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/CommonBehavior.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CommonBehavior.cpp
 
 src/CMakeFiles/basecontroller.dir/CommonBehavior.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/CommonBehavior.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CommonBehavior.cpp > CMakeFiles/basecontroller.dir/CommonBehavior.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CommonBehavior.cpp > CMakeFiles/basecontroller.dir/CommonBehavior.cpp.i
 
 src/CMakeFiles/basecontroller.dir/CommonBehavior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/CommonBehavior.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CommonBehavior.cpp -o CMakeFiles/basecontroller.dir/CommonBehavior.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CommonBehavior.cpp -o CMakeFiles/basecontroller.dir/CommonBehavior.cpp.s
 
 src/CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.o: src/FullPoseEstimation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/FullPoseEstimation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/FullPoseEstimation.cpp
 
 src/CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/FullPoseEstimation.cpp > CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/FullPoseEstimation.cpp > CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.i
 
 src/CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/FullPoseEstimation.cpp -o CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/FullPoseEstimation.cpp -o CMakeFiles/basecontroller.dir/FullPoseEstimation.cpp.s
 
 src/CMakeFiles/basecontroller.dir/GenericBase.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/GenericBase.cpp.o: src/GenericBase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/basecontroller.dir/GenericBase.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/GenericBase.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/GenericBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/basecontroller.dir/GenericBase.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/GenericBase.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/GenericBase.cpp
 
 src/CMakeFiles/basecontroller.dir/GenericBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/GenericBase.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/GenericBase.cpp > CMakeFiles/basecontroller.dir/GenericBase.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/GenericBase.cpp > CMakeFiles/basecontroller.dir/GenericBase.cpp.i
 
 src/CMakeFiles/basecontroller.dir/GenericBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/GenericBase.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/GenericBase.cpp -o CMakeFiles/basecontroller.dir/GenericBase.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/GenericBase.cpp -o CMakeFiles/basecontroller.dir/GenericBase.cpp.s
 
 src/CMakeFiles/basecontroller.dir/Laser.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/Laser.cpp.o: src/Laser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/basecontroller.dir/Laser.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/Laser.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/Laser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/basecontroller.dir/Laser.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/Laser.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/Laser.cpp
 
 src/CMakeFiles/basecontroller.dir/Laser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/Laser.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/Laser.cpp > CMakeFiles/basecontroller.dir/Laser.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/Laser.cpp > CMakeFiles/basecontroller.dir/Laser.cpp.i
 
 src/CMakeFiles/basecontroller.dir/Laser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/Laser.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/Laser.cpp -o CMakeFiles/basecontroller.dir/Laser.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/Laser.cpp -o CMakeFiles/basecontroller.dir/Laser.cpp.s
 
 src/CMakeFiles/basecontroller.dir/OmniRobot.cpp.o: src/CMakeFiles/basecontroller.dir/flags.make
 src/CMakeFiles/basecontroller.dir/OmniRobot.cpp.o: src/OmniRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/basecontroller.dir/OmniRobot.cpp.o"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/OmniRobot.cpp.o -c /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/OmniRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/basecontroller.dir/OmniRobot.cpp.o"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basecontroller.dir/OmniRobot.cpp.o -c /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/OmniRobot.cpp
 
 src/CMakeFiles/basecontroller.dir/OmniRobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basecontroller.dir/OmniRobot.cpp.i"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/OmniRobot.cpp > CMakeFiles/basecontroller.dir/OmniRobot.cpp.i
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/OmniRobot.cpp > CMakeFiles/basecontroller.dir/OmniRobot.cpp.i
 
 src/CMakeFiles/basecontroller.dir/OmniRobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basecontroller.dir/OmniRobot.cpp.s"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/OmniRobot.cpp -o CMakeFiles/basecontroller.dir/OmniRobot.cpp.s
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/OmniRobot.cpp -o CMakeFiles/basecontroller.dir/OmniRobot.cpp.s
 
 # Object files for target basecontroller
 basecontroller_OBJECTS = \
@@ -376,8 +376,8 @@ bin/basecontroller: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 bin/basecontroller: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 bin/basecontroller: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 bin/basecontroller: src/CMakeFiles/basecontroller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable ../bin/basecontroller"
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/basecontroller.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable ../bin/basecontroller"
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/basecontroller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/basecontroller.dir/build: bin/basecontroller
@@ -385,7 +385,7 @@ src/CMakeFiles/basecontroller.dir/build: bin/basecontroller
 .PHONY : src/CMakeFiles/basecontroller.dir/build
 
 src/CMakeFiles/basecontroller.dir/clean:
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src && $(CMAKE_COMMAND) -P CMakeFiles/basecontroller.dir/cmake_clean.cmake
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src && $(CMAKE_COMMAND) -P CMakeFiles/basecontroller.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/basecontroller.dir/clean
 
 src/CMakeFiles/basecontroller.dir/depend: src/CommonBehavior.cpp
@@ -399,6 +399,6 @@ src/CMakeFiles/basecontroller.dir/depend: src/Laser.h
 src/CMakeFiles/basecontroller.dir/depend: src/OmniRobot.cpp
 src/CMakeFiles/basecontroller.dir/depend: src/OmniRobot.h
 src/CMakeFiles/basecontroller.dir/depend: src/ui_mainUI.h
-	cd /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA/src/CMakeFiles/basecontroller.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/basecontroller.dir/depend
 

@@ -1,4 +1,18 @@
-/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 CMake Warning at src/CMakeLists.txt:5 (MESSAGE):
   ROBOCOMP variable not set.  Using the default value: /opt/robocomp
 
@@ -18,6 +32,15 @@ CMake Warning at src/CMakeLists.txt:5 (MESSAGE):
 -- The following Ice libraries were not found:
 --   IceUtil (optional)
 -- Found Ice: /usr/bin/slice2cpp (found version "3.7.3") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
 -- Adding rule to generate CommonBehavior.ice from /opt/robocomp//interfaces/IDSLs/CommonBehavior.idsl
 -- Adding rule to generate FullPoseEstimation.ice from /opt/robocomp//interfaces/IDSLs/FullPoseEstimation.idsl
 -- Adding rule to generate GenericBase.ice from /opt/robocomp//interfaces/IDSLs/GenericBase.idsl
@@ -31,4 +54,4 @@ CMake Warning at src/CMakeLists.txt:5 (MESSAGE):
 -- Generating header file from mainUI.ui
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/robo02/robocomp/components/grants-robolab/2021-S1/components/gA
+-- Build files have been written to: /home/robocomp/robocomp/components/grants-robolab/2021-S1/components/gA

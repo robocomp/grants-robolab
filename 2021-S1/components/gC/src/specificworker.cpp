@@ -97,7 +97,7 @@ void SpecificWorker::compute() {
     }
     //check target
     if(not target.is_active()) return;
-    auto dist = (target.pos- Eigen::Vector2f{pose.x, pose.y}).norm();
+    auto dist = (target.pos- Eigen::Vector2f(pose.x, pose.y)).norm();
     if (dist < 100) {
         target.set_active(false);
         try { omnirobot_proxy->setSpeedBase(0.f, 0.f, 0.f); }
@@ -127,8 +127,8 @@ void SpecificWorker::compute() {
 Eigen::Vector2f SpecificWorker::transform_world_to_robot(const RoboCompFullPoseEstimation::FullPoseEuler &robot_pose, const Target &target)
 {
     Eigen::Matrix2f rot;
-    rot << cos(robot_pose.rz), sin(robot_pose.rz),
-            -sin(robot_pose.rz), cos(robot_pose.rz);
+    rot << cos(robot_pose.rz), -sin(robot_pose.rz),
+            sin(robot_pose.rz), cos(robot_pose.rz);
     auto target_in_robot = rot.transpose()* (target.pos- Eigen::Vector2f(robot_pose.x, robot_pose.y));
     return target_in_robot;
 }
